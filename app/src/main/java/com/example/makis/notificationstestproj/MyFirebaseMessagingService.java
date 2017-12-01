@@ -12,6 +12,7 @@ import android.support.v4.app.NotificationCompat;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
+import com.google.gson.Gson;
 
 /**
  * Created by makis on 23/11/2017.
@@ -22,9 +23,12 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     static int id = 0;
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
-        Intent intent=new Intent(this,MainActivity.class);
+        Intent intent=new Intent(this,SecondActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         PendingIntent pendingIntent= PendingIntent.getActivity(this,0,intent,PendingIntent.FLAG_ONE_SHOT);
+        Gson myGson=new Gson();
+        String myJson = myGson.toJson(remoteMessage.getData());
+        intent.putExtra("myjson", myJson);
         NotificationCompat.Builder notificationBuilder=new NotificationCompat.Builder(this,"1");
         notificationBuilder.setContentTitle(remoteMessage.getNotification().getTitle());
         notificationBuilder.setContentText(remoteMessage.getNotification().getBody());

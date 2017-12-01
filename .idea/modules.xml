@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/NotificationsTestProj.iml" filepath="$PROJECT_DIR$/NotificationsTestProj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NotificationsTestApp.iml" filepath="$PROJECT_DIR$/NotificationsTestApp.iml" />
+      <module fileurl="file://C:\Users\makis\AndroidStudioProjects\NotificationsTestApp\NotificationsTestApp\NotificationsTestProj.iml" filepath="C:\Users\makis\AndroidStudioProjects\NotificationsTestApp\NotificationsTestApp\NotificationsTestProj.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
